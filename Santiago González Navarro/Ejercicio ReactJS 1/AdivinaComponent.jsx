@@ -11,6 +11,13 @@ function AdivinaComponent() {
     const [perdidas, setPerdidas] = useState(0);
 
     const sortear = () => {
+        // Validar que el número esté entre 1 y 10
+        const num = Number(numero);
+        if (num < 1 || num > 10) {
+            alert("Por favor ingrese un número entre 1 y 10");
+            return;
+        }
+
         const winner = Math.floor(Math.random() * 10) + 1;
         setSorteo(winner);
         setResult(true);

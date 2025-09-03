@@ -3,24 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './App.css';
 import reportWebVitals from './reportWebVitals';
-import PageFeeds from './pages/PageFeeds';
-import Footer
-  from './components/Footer';
-import AdivinaComponent from './examples/AdivinaComponent';
-import MutableComponent from './examples/MutableComponent';
-import HookExample from './examples/HookExample';
+import VideoPlayer from './components/VideoPlayer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AdivinaComponent></AdivinaComponent>
-    { /*
-      <AdivinaComponent></AdivinaComponent>
-      <MutableComponent></MutableComponent>
-      <HookExample></HookExample>
-      <Footer></Footer>
-     */}
+    <VideoPlayer
+      src="https://www.youtube.com/watch?v=4phUCJlomPo"
+      title="Video de Ejemplo"
+      description="Este es un video de ejemplo para demostrar el componente."
+    />
   </React.StrictMode>
 );
 
